@@ -7,8 +7,6 @@
 
 <script>
   import demo from './demo'
-
-
 export default {
   name: 'HelloWorld',
   components: {
