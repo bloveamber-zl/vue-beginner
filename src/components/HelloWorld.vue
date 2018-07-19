@@ -8,8 +8,7 @@
 <script>
   import demo from './demo'
   import Demo from '../api/Demo'
-export
-default {
+export default {
   name: 'HelloWorld',
   components: {
     demo
