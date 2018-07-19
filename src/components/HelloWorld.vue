@@ -26,8 +26,16 @@ default {
     }
   },
   created () {
-    Demo.getUser().then(function (res) {
-      console.log(`res: ${JSON.stringify(res)}`)
+    // Demo.getUser().then(function (res) {
+    //   console.log(`res: ${JSON.stringify(res)}`)
+    // })
+    let obj = {
+      flowtype:"基本流程",
+      personid:"yuxinyi",
+      flowDeptId:""
+    }
+    Demo.createdFlowType(obj).then(function (res) {
+      console.log(`res : ${JSON.stringify(res.data.data)}`)
     })
   }
 }
