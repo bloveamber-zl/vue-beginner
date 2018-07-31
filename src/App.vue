@@ -1,14 +1,17 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
+  <side-nav></side-nav>
     <router-view/>
   </div>
 </template>
 
 <script>
-
+import Sidenav from './components/sideNav'
 export default {
-  name: 'App'
+  name: 'App',
+  components: {
+    'side-nav': Sidenav
+  },
 }
 </script>
 

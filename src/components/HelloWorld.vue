@@ -1,7 +1,11 @@
 <template>
   <div>
     <input v-model="inputVal" type="text">
-    <demo @tongxin="demo" :msg="inputVal"></demo>
+    <demo ref="refName" @tongxin="demo" :msg="inputVal"></demo>
+    <button @click="demo">点我呀</button>
+    <div v-for="item in test1.test2.test3.test4">
+      {{item}}
+    </div>
   </div>
 </template>
 
@@ -16,13 +20,24 @@ export default {
   data () {
     return {
       msg: 'Welcome to Your Vue.js App',
-      inputVal: ' '
+      inputVal: ' ',
+      test1: {
+        test2: {
+          test3: {
+            test4: ['q','w','e','r','t']
+          }
+        }
+      }
     }
   },
   methods: {
-    demo (val) {
-      console.log(val)
+    // demo (val) {
+    demo () {
+      this.$refs.refName.outPut()
     }
+  },
+  mounted () {
+    // this.demo()
   },
   created () {
     // Demo.getUser().then(function (res) {
@@ -34,7 +49,7 @@ export default {
       flowDeptId:""
     }
     Demo.createdFlowType(obj).then(function (res) {
-      console.log(`res : ${JSON.stringify(res.data.data)}`)
+      // console.log(`res : ${JSON.stringify(res.data.data)}`)
     })
   }
 }
