@@ -51,6 +51,9 @@ export default {
     Demo.createdFlowType(obj).then(function (res) {
       // console.log(`res : ${JSON.stringify(res.data.data)}`)
     })
+    Demo.getUser().then(function (res) {
+      console.log(`res : ${JSON.stringify(res.data.data)}`)
+    })
   }
 }
 </script>
